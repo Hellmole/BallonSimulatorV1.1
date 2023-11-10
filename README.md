@@ -9,4 +9,4 @@
 # Printscreen
 ![obrazek](https://github.com/Hellmole/BallonSimulatorV1.1/assets/149156309/f91614c3-7ccd-48b8-b324-86a0470f3855)
 
-# Author: Jakub Jandura
+# Hellmole
