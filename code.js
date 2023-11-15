@@ -1,12 +1,12 @@
-let gas = 250;
-    let windspeed = 2;
+    let gas = 250;
+    let windLevel = 2;
     let gaslevel = 0;
     let MoveLightHouse = 0;
     let temperature = 80;
     let speed_next_level = 0;
     let crash = 0;
     let score = 0;
-    let speed_wind = 0;
+    let windLevelY = 0;
     const canvas = document.getElementById('myCanvas');
     const ctx = canvas.getContext('2d');
     
@@ -47,7 +47,7 @@ let gas = 250;
       ctx.drawImage(ballImage, ball.x - ball.radius, ball.y - ball.radius, 150, 150);
 
       speedBallonText = ball.speedY * 10;
-      speed2 = windspeed + speed_wind;
+      speedText = windLevel + windLevelY;
 
       // flying text Ballon 
       ctx.font = '16px Arial';
@@ -58,7 +58,7 @@ let gas = 250;
  
       // Static text
 
-      ctx.fillText('wind speed (m/s) :  ' + speed2.toFixed(1), 60, 50); 
+      ctx.fillText('wind speed (m/s) :  ' + speedText.toFixed(1), 60, 50); 
 
       ctx.fillText('score :  ' + MoveLightHouse.toFixed(0), 800, 90);  
 
@@ -120,8 +120,8 @@ ctx.fillText('To start, hold down the space bar.', 410, 150 );
 
      // Start ballon
       if (ball.y < 435) {
-        speed_wind = ((436 - ball.y) * 0.0025) + 0.5;
-        ball.x = ball.x + speed_wind + speed_next_level;
+        windLevelY = ((436 - ball.y) * 0.0025) + 0.5;
+        ball.x = ball.x + windLevelY + speed_next_level;
         
         score = 0;
         crash = 0;
@@ -163,7 +163,7 @@ ctx.fillText('To start, hold down the space bar.', 410, 150 );
         temperature = 80;
         gaslevel = gaslevel + 35;
         gas = 250 - gaslevel;
-        windspeed = windspeed + 4;
+        windLevel = windLevel + 4;
         
 
        } 
@@ -227,7 +227,7 @@ ctx.fillText('To start, hold down the space bar.', 410, 150 );
         score = MoveLightHouse ;
         MoveLightHouse = 0;
         speed_next_level = 0;
-        windspeed = 2;
+        windLevel = 2;
         gas = 250;
         crash = 1;
 
