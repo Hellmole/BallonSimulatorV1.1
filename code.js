@@ -12,7 +12,7 @@
     
 
     const ball = {
-      x: 40,
+      x: 20,
       y: 450,
       radius: 65,
       speedY: 0.02, // speed ballon down
@@ -221,7 +221,7 @@ ctx.fillText('To start, hold down the space bar.', 410, 150 );
       
       
       ball.y = 450;
-        ball.x = 40;
+        ball.x = 20;
         temperature = 80;
         gaslevel = 0;
         score = MoveLightHouse ;
